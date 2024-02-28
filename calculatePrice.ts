@@ -9,8 +9,8 @@ enum Rounding {
   FLOOR = 2,
 }
 
-// 今後の増税に備えて消費税率を定数として定義
-const taxRate = 0.05;
+// 消費税率 5% -> 8% に変更
+const taxRate = 0.08;
 
 function calculatePrice(product: Product, quantity: number, rounding: Rounding): number {
   // 税込価格
