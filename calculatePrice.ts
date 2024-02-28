@@ -5,6 +5,7 @@ type Product = {
 };
 
 enum Rounding {
+  NONE = -1,
   ROUND = 0,
   CEIL = 1,
   FLOOR = 2,
@@ -23,6 +24,8 @@ function calculatePrice(product: Product, quantity: number, rounding: Rounding):
 
   // 端数処理
   switch (rounding) {
+    case Rounding.NONE:
+      return price;
     case Rounding.ROUND:
       return Math.round(price);
     case Rounding.CEIL:
