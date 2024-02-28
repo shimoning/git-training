@@ -4,7 +4,8 @@ type Product = {
 };
 
 function calculatePrice(product: Product, quantity: number): number {
-  return product.price * quantity;
+  // 消費税3％導入
+  return Math.ceil(product.price * quantity * 1.03);
 }
 
 export default calculatePrice;
